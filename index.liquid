@@ -1,0 +1,43 @@
+---
+layout: layouts/default.liquid
+title: Welcome
+pagination:
+  data: collections.posts
+  size: 9
+  reverse: true
+---
+<section class="section">
+  <div class="container">
+    <h2 class="title">Photos</h2>
+    <div class="columns is-multiline is-desktop">
+      {% for post in pagination.items %}
+      <div class="column is-4-desktop mb-5">
+        <a href="{{post.url}}">
+          <img class="image is-fullwidth is-radius is-object-cover is-h-80" src="{{ post.data.image }}" alt="">
+          </a>
+        <div class="mt-4">
+          <span class="has-text-grey">{{ post.date | date: '%B %d, %Y' }}</span>
+        </div>
+        <h3 class="mt-4 mb-4 title is-size-4 is-spaced"><a href="{{post.url}}">{{ post.data.title }}</a></h3>
+        <p class="subtitle">{{ post.data.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="has-text-centered"> {% if pagination.pageLinks.length > 1 %}
+      <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+        {% if pagination.previousPageLink %}
+        <a class="pagination-previous" href="{{ pagination.previousPageHref | url }}">View Newer</a>
+        {% else %}
+        <a class="pagination-previous" disabled>View Newer</a>
+
+        {% endif %}
+        {% if pagination.nextPageLink %}
+        <a class="pagination-next" href="{{ pagination.nextPageHref | url }}">View Older</a>
+        {% else %}
+        <a class="pagination-next" disabled>View Older</a>
+
+        {% endif %}
+      </nav>
+      {% endif %}</div>
+  </div>
+</section>
