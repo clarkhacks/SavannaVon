@@ -1,16 +1,26 @@
+
 backend:
-  name: github
-  repo: clarkhacks/savannavon
-  branch: master
-  site_domain: www.savanna.today
-media_folder: "images/uploads"
+  # Use netlify identity as backend
+  name: git-gateway
+  branch: main
+  ### enable below lines for github integration ###
+  # name: github
+  # repo: surjithctly/neat-starter
+media_folder: "/public/images"
+public_folder: "/public/images"
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+# publish_mode: editorial_workflow
 collections:
-  - name: "post" # Used in routes, e.g. /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "_posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}-{{year}}-{{month}}-{{day}}" # Filename template i.e. YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "desc", widget: "markdown"}
-      - {label: "Image", name: "image", widget: "string"}
+  - label: "Blog"
+    name: "blog"
+    folder: "/posts"
+    create: true
+    editor:
+      preview: false
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "desc", widget: "string" }
+      - { label: "Image", name: "image", widget: "string" }
