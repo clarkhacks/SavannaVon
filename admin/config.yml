@@ -19,6 +19,7 @@ collections:
     create: true
     editor:
       preview: false
+    slug: "{{slug}}-{{year}}-{{month}}-{{day}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "desc", widget: "string" }
