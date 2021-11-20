@@ -6,7 +6,7 @@
     "build": "eleventy",
     "serve": "eleventy --serve",
     "clean": "rm -rf docs",
-    "upload": "eleventy && git add . && git commit -m 'automated push'"
+    "upload": "eleventy && git add . && git commit -m 'automated push' && git push"
   },
   "keywords": [],
   "author": "Arpit Batra (arpitbatra123@gmail.com)",
