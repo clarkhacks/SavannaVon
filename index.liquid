@@ -27,15 +27,15 @@ pagination:
     <div class="has-text-centered"> {% if pagination.pageLinks.length > 1 %}
       <nav class="pagination is-rounded" role="navigation" aria-label="pagination">
         {% if pagination.previousPageLink %}
-        <a class="pagination-previous" href="{{ pagination.previousPageHref | url }}">View Older</a>
+        <a class="pagination-previous" href="{{ pagination.previousPageHref | url }}">View Newer</a>
         {% else %}
-        <a class="pagination-previous" disabled>View Older</a>
+        <a class="pagination-previous" disabled>View Newer</a>
 
         {% endif %}
         {% if pagination.nextPageLink %}
-        <a class="pagination-next" href="{{ pagination.nextPageHref | url }}">View Newer</a>
+        <a class="pagination-next" href="{{ pagination.nextPageHref | url }}">View Older</a>
         {% else %}
-        <a class="pagination-next" disabled>View Newer</a>
+        <a class="pagination-next" disabled>View Older</a>
 
         {% endif %}
       </nav>
