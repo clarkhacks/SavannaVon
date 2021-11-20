@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: clarkhacks/savannavon
   branch: master
   site_domain: www.savanna.today
