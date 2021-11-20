@@ -5,8 +5,8 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "clean": "rm -rf _site",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf docs",
+    "upload": "eleventy && git add . && git commit -m 'automated push'"
   },
   "keywords": [],
   "author": "Arpit Batra (arpitbatra123@gmail.com)",
