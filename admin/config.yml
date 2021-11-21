@@ -23,7 +23,7 @@ collections:
     create: true
     editor:
       preview: false
-    slug: "{{slug}}-{{date}}" # Set to {{year}}-{{month}}-{{daye}} when removing date object
+    slug: "{{slug}}-{{origin-date}}" # Set to {{year}}-{{month}}-{{daye}} when removing date object
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "desc", widget: "string" }
