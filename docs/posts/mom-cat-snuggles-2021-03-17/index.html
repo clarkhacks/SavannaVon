@@ -47,7 +47,7 @@
               <p><img src="https://i.imgur.com/eWBBJoQ.jpg" alt="Cat snuggling with baby"></p>
 
             </p>
-            <div id="disqus_thread"></div>
+            <div id="gitalk-container"></div>
           </div>
         </div>
 
@@ -55,26 +55,21 @@
     </div>
   </div>
 </section>
-            <script>
-              /**
-               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-              /*
-              var disqus_config = function () {
-              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-              };
-              */
-              (function () { // DON'T EDIT BELOW THIS LINE
-                var d = document,
-                  s = d.createElement('script');
-                s.src = 'https://savanna-today.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-              })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
-                by Disqus.</a></noscript>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+  const gitalk = new Gitalk({
+  clientID: '9f002c6ccae17950c8f8',
+  clientSecret: '22eff164aaf1b81d7d26e3173856f55d443a5750',
+  repo: 'SavannaVon',      // The repository of store comments,
+  owner: 'clarkhacks',
+  admin: ['clarkhacks'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
+  </script>
 
         <section class="section">
     <div class="container">
