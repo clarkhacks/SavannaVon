@@ -6,12 +6,16 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "/public/images"
-public_folder: "/public/images"
+
 search: false
 logo_url: https://cdn.weckmann.me/wkmn.png
 display_url: https://www.savanna.today
 site_url: https://www.savanna.today
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: savanna-today
+    api_key: 649123831722512
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -27,4 +31,4 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "desc", widget: "string" }
-      - { label: "Image", name: "image", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
