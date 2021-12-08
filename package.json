@@ -17,8 +17,8 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
     "child_process": "^1.0.2",
     "concurrently": "^6.2.2",
-    "fastify": "^3.24.0",
+    "fastify": "^3.24.1",
     "fs": "0.0.1-security",
-    "sass": "^1.42.1"
+    "sass": "^1.44.0"
   }
 }
